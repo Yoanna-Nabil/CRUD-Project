@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="w-75 mx-auto my-5">
+
+        <div class="mb-3">
+       <label for="productName">ProductName:</label>
+       <input checked class="form-control my-2" type="text" id="productName" name="Name">
+       <small class="text-muted">ProductName must be chars only</small>
+    </div>
+
+    <div class="mb-3">
+        <label for="productPrice">ProductPrice:</label>
+        <input checked class="form-control my-2" type="number" id="productPrice" name="Price">
+        <small class="text-muted">ProductPrice must be chars only</small>
+     </div>
+
+     <div class="mb-3">
+        <label for="productCategory">ProductCategory:</label>
+        <input checked class="form-control my-2" type="text" id="productCategory" name="Category">
+        <small class="text-muted">ProductCategory must be chars only</small>
+     </div>
+
+     <div class="mb-3">
+        <label for="productDescription">ProductDescription:</label>
+        <textarea checked class="form-control my-2" type="text" id="productDescription" name="Description"></textarea>
+        <small class="text-muted">ProductDescription must be chars only</small>
+     </div>
+
+    <button id="addBtn" onclick="addProduct()" class="btn btn-outline-info my-3">Add Product</button>
+    <button id="updateBtn" onclick="updateProduct()" class="btn btn-outline-info my-3 d-none">Update Product</button>
+
+    </div>
+    <input id="searchproduct" oninput="searchProducts()" type="text" placeholder="Search..." class="my-3 w-75 mx-3 form-control mx-auto">
+
+
+    <div class="w-75 mx-auto my-3">
+      <table class="table text-center">
+         <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+         </thead>
+         <tbody id="tablebody">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button class="btn btn-outline-warning btn-sm">Update</button></td>
+                <td><button class="btn btn-outline-danger btn-sm">Delete</button></td>
+            </tr>
+         </tbody>
+      </table>
+    </div>
+
+
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/home.js"></script>
+</body>
+</html>
